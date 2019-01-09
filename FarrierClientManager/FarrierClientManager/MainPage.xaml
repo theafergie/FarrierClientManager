@@ -6,8 +6,6 @@
 
     <StackLayout HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand">
         <!-- Place new controls here -->
-        <Label Text="Farrier Client Manager"/>
-        <Button Clicked="Button_Clicked" Text="ENTER"></Button>
     </StackLayout>
 
 </ContentPage>

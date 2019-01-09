@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Welcome @Cody!"  
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FarrierClientManager.WelcomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Existing Client" Clicked="Button_Clicked"></Button>
+            <Button Text="New Client" Clicked="Button_Clicked_1"></Button>
+            <Button Text="Inventory"></Button>
+            <Button Text="Price Sheet"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

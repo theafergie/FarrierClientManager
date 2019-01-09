@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace FarrierClientManager
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : ContentPage
+	public partial class ExistingCustomer : ContentPage
 	{
-		public HomePage ()
+		public ExistingCustomer ()
 		{
 			InitializeComponent ();
 		}
-
-        async void Button_Clicked(object sender, EventArgs e)
-        {
-           await Navigation.PushAsync(new WelcomePage());
-        }
-    }
+	}
 }
