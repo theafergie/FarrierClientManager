@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace FarrierClientManager
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ExistingCustomer : ContentPage
+	public partial class NewInvoice : ContentPage
 	{
-		public ExistingCustomer ()
+		public NewInvoice ()
 		{
 			InitializeComponent ();
 		}

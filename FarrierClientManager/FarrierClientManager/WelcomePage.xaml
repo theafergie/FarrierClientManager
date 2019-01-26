@@ -5,10 +5,10 @@
              x:Class="FarrierClientManager.WelcomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Existing Client" Clicked="Button_Clicked"></Button>
-            <Button Text="New Client" Clicked="Button_Clicked_1"></Button>
-            <Button Text="Inventory"></Button>
-            <Button Text="Price Sheet"></Button>
+            <Button Text="New Invoice" Clicked="Button_Clicked"></Button>
+            <Button Text="Price Sheet" Clicked="Button_Clicked_1"></Button>
+            <Button Text="Inventory" Clicked="Button_Clicked_2"></Button>
+            <Button Text="Client Lookup" Clicked="Button_Clicked_3"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

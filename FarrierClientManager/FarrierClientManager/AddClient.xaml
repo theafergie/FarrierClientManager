@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Add New"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FarrierClientManager.AddClient">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Contact Info">
+                    <EntryCell Keyboard="Text" Placeholder="First Name"></EntryCell>
+                    <EntryCell Keyboard="Text" Placeholder="Last Name"></EntryCell>
+                    <EntryCell Placeholder="Address"></EntryCell>
+                    <EntryCell Keyboard="Text" Placeholder="City"></EntryCell>
+                    <EntryCell Keyboard="Numeric" Placeholder="Zip"></EntryCell>
+                    <EntryCell Keyboard="Text" Placeholder="County"></EntryCell>
+                    <EntryCell Keyboard="Numeric" Placeholder="Phone Number"></EntryCell>
+                    <!--<Button Text="Save"/>-->
+
+                </TableSection>
+
+            </TableRoot>
+
+        </TableView>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -12,6 +12,7 @@ namespace FarrierClientManager
             InitializeComponent();
 
             MainPage = new NavigationPage (new HomePage());
+            
         }
 
         protected override void OnStart()

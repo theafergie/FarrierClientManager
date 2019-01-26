@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 namespace FarrierClientManager
 {
+   
     public partial class MainPage : ContentPage
     {
         public MainPage()
