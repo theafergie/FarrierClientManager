@@ -18,12 +18,8 @@
                     <EntryCell Keyboard="Numeric" Placeholder="Zip"></EntryCell>
                     <EntryCell Keyboard="Text" Placeholder="County"></EntryCell>
                     <EntryCell Keyboard="Numeric" Placeholder="Phone Number"></EntryCell>
-                    <!--<Button Text="Save"/>-->
-
                 </TableSection>
-
             </TableRoot>
-
         </TableView>
 
     </ContentPage.Content>
