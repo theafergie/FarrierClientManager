@@ -11,12 +11,13 @@ namespace FarrierClientManager
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage (new HomePage());
+            MainPage = new NavigationPage (new MainPage());
             
         }
 
         protected override void OnStart()
         {
+            DependencyService.Get<Persistence.ISQLiteDb>().GetConnection();
             // Handle when your app starts
         }
 

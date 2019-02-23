@@ -1,23 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FarrierClientManager.Persistence;
+using SQLite;
+using System;
 using Xamarin.Forms;
 
 namespace FarrierClientManager
 {
-   
     public partial class MainPage : ContentPage
     {
+        public SQLiteAsyncConnection _connection;
+        public Client _client;
+
         public MainPage()
         {
             InitializeComponent();
+
+            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            _connection.CreateTableAsync<Client>();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        async void Button_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new WelcomePage());
         }
     }
 }

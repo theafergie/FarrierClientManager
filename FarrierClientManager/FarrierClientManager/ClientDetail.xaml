@@ -6,16 +6,15 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding FullName}"></Label>
-            <Label Text="{Binding Email}"></Label>
-            <Label Text="{Binding Phone}"></Label>
+            <Label Text="{Binding PhoneNumber}"></Label>
+            <Label Text="{Binding Address}"></Label>
+            <Label Text="{Binding City}"></Label>
+            <Label Text="{Binding Zip}"></Label>
+            <Label Text="{Binding County}"></Label>
 
-            <!--<ListView x:Name="clientDetail">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        --><!--<TextCell Text="{Binding client.Id}"/>--><!--
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>-->
+            <ListView x:Name="clientDetail"
+                      BindingContext="x:Reference ClientAdded">
+            </ListView>
 
         </StackLayout>
     </ContentPage.Content>

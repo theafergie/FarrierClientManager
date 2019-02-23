@@ -3,21 +3,23 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FarrierClientManager.AddClient">
+   
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Save"></ToolbarItem>
+        <ToolbarItem Text="Save" Clicked="OnSave"></ToolbarItem>
     </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         
         <TableView Intent="Form">
             <TableRoot>
-                <TableSection Title="Contact Info">
-                    <EntryCell Keyboard="Text" Placeholder="First Name"></EntryCell>
-                    <EntryCell Keyboard="Text" Placeholder="Last Name"></EntryCell>
-                    <EntryCell Placeholder="Address"></EntryCell>
-                    <EntryCell Keyboard="Text" Placeholder="City"></EntryCell>
-                    <EntryCell Keyboard="Numeric" Placeholder="Zip"></EntryCell>
-                    <EntryCell Keyboard="Text" Placeholder="County"></EntryCell>
-                    <EntryCell Keyboard="Numeric" Placeholder="Phone Number"></EntryCell>
+                <TableSection Title="Contact Info" BindingContext="clientDetail">
+                    <EntryCell x:Name="FirstName" Placeholder="First Name" ></EntryCell>
+                    <EntryCell x:Name="LastName" Keyboard="Text" Placeholder="Last Name"></EntryCell>
+                    <EntryCell x:Name="Address" Placeholder="Address"></EntryCell>
+                    <EntryCell x:Name="City" Keyboard="Text" Placeholder="City"></EntryCell>
+                    <EntryCell x:Name="Zip" Keyboard="Numeric" Placeholder="Zip"></EntryCell>
+                    <EntryCell x:Name="County" Keyboard="Text" Placeholder="County"></EntryCell>
+                    <EntryCell x:Name="PhoneNumber" Keyboard="Numeric" Placeholder="Phone Number"></EntryCell>
                 </TableSection>
             </TableRoot>
         </TableView>

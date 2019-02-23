@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage Title="Client Lookup"
+<ContentPage Title="Client Search"
     xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FarrierClientManager.ClientSearch">
@@ -9,16 +9,18 @@
     <ContentPage.Content>
         <StackLayout>
             <SearchBar Placeholder="Search by name"/>
-            <ListView x:Name="clients"
-                      ItemSelected="OnClientSelected" >
+
+            <ListView x:Name="clientDetail"
+                      ItemsSource="OnAddCLient"
+                      ItemSelected="OnClientSelected" 
+                      IsPullToRefreshEnabled="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding FullName}"></TextCell>
+                        <TextCell Text="{Binding FullName}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
