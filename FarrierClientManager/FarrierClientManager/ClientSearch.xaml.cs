@@ -1,4 +1,5 @@
 ﻿using FarrierClientManager.Persistence;
+using FarrierClientManager.ViewModels;
 using SQLite;
 using System;
 using System.Collections.ObjectModel;
@@ -11,7 +12,7 @@ namespace FarrierClientManager
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ClientSearch : ContentPage
 	{
-        private ObservableCollection<Client> _clients;
+        private ObservableCollection<ClientViewModel> _clients;
         private SQLiteAsyncConnection _connection;
         private bool _isDataLoaded;
 
@@ -20,6 +21,7 @@ namespace FarrierClientManager
             InitializeComponent();
 
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            //OnPropertyChanged("_clients");
         }
 
         protected override async void OnAppearing()
@@ -38,8 +40,8 @@ namespace FarrierClientManager
         {
             await _connection.CreateTableAsync<Client>();
 
-            var clients = await _connection.Table<Client>().ToListAsync();
-            _clients = new ObservableCollection<Client>(clients);
+            var clients = await _connection.Table<ClientViewModel>().ToListAsync();
+            _clients = new ObservableCollection<ClientViewModel>(clients);
             clientDetail.ItemsSource = _clients;
         }
 
@@ -48,7 +50,7 @@ namespace FarrierClientManager
             if (clientDetail.SelectedItem == null)
                 return;
 
-            var selectedClient = e.SelectedItem as Client;
+            var selectedClient = e.SelectedItem as ClientViewModel;
             clientDetail.SelectedItem = null;
 
             var page = new ClientDetail(selectedClient);
@@ -64,11 +66,12 @@ namespace FarrierClientManager
                 selectedClient.PhoneNumber = client.PhoneNumber;
             };
             await Navigation.PushAsync(page);
+            OnPropertyChanged();
         }
 
         async void OnPlusSignClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddClient());
+            await Navigation.PushAsync(new AddClient(new ClientViewModel()));
         }
     }
 }

@@ -1,25 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage Title="Client Search"
-    xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FarrierClientManager.ClientSearch">
+             x:Class="FarrierClientManager.EquineListPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Icon="plus.png" Clicked="OnPlusSignClicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar Placeholder="Search by name"/>
-
-            <ListView x:Name="clientDetail"
-                      ItemsSource="OnAddCLient"
-                      ItemSelected="OnClientSelected">
+            <ListView
+                x:Name="equineList">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding FullName}"/>
+                        <ViewCell>
+                            <Label Text="{Binding Name}"/>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

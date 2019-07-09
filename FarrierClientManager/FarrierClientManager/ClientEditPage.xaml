@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FarrierClientManager.ClientEditPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="OnSaveClicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Edit Contact">
+                    <EntryCell x:Name="firstName" Text="{Binding FirstName}" Placeholder="First Name" ></EntryCell>
+                    <EntryCell x:Name="lastName" Text="{Binding LastName}" Keyboard="Text" Placeholder="Last Name"></EntryCell>
+                    <EntryCell x:Name="address" Text="{Binding Address}" Placeholder="Address"></EntryCell>
+                    <EntryCell x:Name="city" Text="{Binding City}" Keyboard="Text" Placeholder="City"></EntryCell>
+                    <EntryCell x:Name="zip" Text="{Binding Zip}" Keyboard="Numeric" Placeholder="Zip"></EntryCell>
+                    <EntryCell x:Name="county" Text="{Binding County}" Keyboard="Text" Placeholder="County"></EntryCell>
+                    <EntryCell x:Name="phoneNumber" Text="{Binding PhoneNumber}" Keyboard="Numeric" Placeholder="Phone Number"></EntryCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FarrierClientManager.AddEquinePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="OnSave"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Equine Info" BindingContext="equineDetail">
+                        <EntryCell x:Name="Name" Placeholder="Name" ></EntryCell>
+                        <EntryCell x:Name="Breed" Placeholder="Breed"></EntryCell>
+                        <EntryCell x:Name="Color" Placeholder="Color"></EntryCell>
+                        <EntryCell x:Name="ShoeSize"  Placeholder="Shoe Size"></EntryCell>
+                        <EntryCell x:Name="ShoeType" Placeholder="Shoe Type"></EntryCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

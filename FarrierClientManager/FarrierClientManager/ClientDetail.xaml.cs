@@ -1,4 +1,5 @@
 ﻿using FarrierClientManager.Persistence;
+using FarrierClientManager.ViewModels;
 using SQLite;
 using System;
 using System.Collections.ObjectModel;
@@ -10,13 +11,15 @@ namespace FarrierClientManager
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ClientDetail : ContentPage
     {
-        public event EventHandler<Client> ClientAdded;
-        public event EventHandler<Client> ClientUpdated;
-        private ObservableCollection<Client> _client;
+        public event EventHandler<ClientViewModel> ClientAdded;
+        public event EventHandler<ClientViewModel> ClientUpdated;
+        private ObservableCollection<ClientViewModel> _client = new ObservableCollection<ClientViewModel>();
+
+        ClientViewModel myClient;
 
         private SQLiteAsyncConnection _connection;
 
-        public ClientDetail(Client client)
+        public ClientDetail(ClientViewModel client)
         {
             if (client == null)
             {
@@ -27,7 +30,7 @@ namespace FarrierClientManager
 
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
 
-            BindingContext = new Client
+            BindingContext = new ClientViewModel
             {
                 Id = client.Id,
                 FirstName = client.FirstName,
@@ -38,8 +41,38 @@ namespace FarrierClientManager
                 County = client.County,
                 PhoneNumber = client.PhoneNumber,
             };
+            myClient = client;
+            //clientDetail.ItemsSource = _client;
+        }
 
-            clientDetail.ItemsSource = _client;
+        async void OnEdit(object sender, EventArgs e)
+        {
+            var client = myClient;
+            await Navigation.PushAsync(new ClientEditPage(client));
+        }
+
+        private async void OnDeleteClicked(object sender, EventArgs e)
+        {
+            var client = myClient;   
+
+            await _connection.DeleteAsync(client);
+
+            _client.Remove(client);
+
+            //TODO deletes contact but not reflecting change in ui until navigating
+            //away from page and then navigating back
+            OnPropertyChanged();
+            await Navigation.PopAsync();
+        }
+
+        private void NotesBox_Completed(object sender, EventArgs e)
+        {
+
+        }
+
+        async void EquineButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EquineListPage(myClient));
         }
     }
 }
