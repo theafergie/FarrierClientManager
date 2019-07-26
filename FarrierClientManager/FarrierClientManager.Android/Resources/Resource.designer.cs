@@ -26,6 +26,23 @@ namespace FarrierClientManager.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.input_layout_drop_down_icon = global::FarrierClientManager.Droid.Resource.Drawable.input_layout_drop_down_icon;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglecollapseicon = global::FarrierClientManager.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglevisibleicon = global::FarrierClientManager.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Dimension.activity_horizontal_margin = global::FarrierClientManager.Droid.Resource.Dimension.activity_horizontal_margin;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Dimension.activity_vertical_margin = global::FarrierClientManager.Droid.Resource.Dimension.activity_vertical_margin;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Dimension.date_text_size = global::FarrierClientManager.Droid.Resource.Dimension.date_text_size;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Dimension.date_text_tab_size = global::FarrierClientManager.Droid.Resource.Dimension.date_text_tab_size;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Dimension.month_row_size = global::FarrierClientManager.Droid.Resource.Dimension.month_row_size;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Dimension.month_row_tab_size = global::FarrierClientManager.Droid.Resource.Dimension.month_row_tab_size;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Dimension.month_text_size = global::FarrierClientManager.Droid.Resource.Dimension.month_text_size;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Dimension.month_text_tab_size = global::FarrierClientManager.Droid.Resource.Dimension.month_text_tab_size;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Drawable.Icon = global::FarrierClientManager.Droid.Resource.Drawable.Icon;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Drawable.input_layout_drop_down_icon = global::FarrierClientManager.Droid.Resource.Drawable.input_layout_drop_down_icon;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Drawable.inputlayout_togglecollapseicon = global::FarrierClientManager.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.Drawable.inputlayout_togglevisibleicon = global::FarrierClientManager.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.String.sfcalendar_inlineviewalldaytext = global::FarrierClientManager.Droid.Resource.String.sfcalendar_inlineviewalldaytext;
+			global::Syncfusion.SfCalendar.XForms.Droid.Resource.String.sfcalendar_inlineviewnoappointmenttext = global::FarrierClientManager.Droid.Resource.String.sfcalendar_inlineviewnoappointmenttext;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::FarrierClientManager.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -1807,6 +1824,12 @@ namespace FarrierClientManager.Droid
 			// aapt resource value: 0x7f080013
 			public const int abc_text_size_title_material_toolbar = 2131230739;
 			
+			// aapt resource value: 0x7f0800a4
+			public const int activity_horizontal_margin = 2131230884;
+			
+			// aapt resource value: 0x7f0800a5
+			public const int activity_vertical_margin = 2131230885;
+			
 			// aapt resource value: 0x7f08000c
 			public const int cardview_compat_inset_shadow = 2131230732;
 			
@@ -1830,6 +1853,12 @@ namespace FarrierClientManager.Droid
 			
 			// aapt resource value: 0x7f080098
 			public const int compat_control_corner_material = 2131230872;
+			
+			// aapt resource value: 0x7f0800a6
+			public const int date_text_size = 2131230886;
+			
+			// aapt resource value: 0x7f0800a7
+			public const int date_text_tab_size = 2131230887;
 			
 			// aapt resource value: 0x7f080072
 			public const int design_appbar_elevation = 2131230834;
@@ -1989,6 +2018,18 @@ namespace FarrierClientManager.Droid
 			
 			// aapt resource value: 0x7f080005
 			public const int item_touch_helper_swipe_escape_velocity = 2131230725;
+			
+			// aapt resource value: 0x7f0800aa
+			public const int month_row_size = 2131230890;
+			
+			// aapt resource value: 0x7f0800ab
+			public const int month_row_tab_size = 2131230891;
+			
+			// aapt resource value: 0x7f0800a8
+			public const int month_text_size = 2131230888;
+			
+			// aapt resource value: 0x7f0800a9
+			public const int month_text_tab_size = 2131230889;
 			
 			// aapt resource value: 0x7f080006
 			public const int mr_controller_volume_group_list_item_height = 2131230726;
@@ -2342,26 +2383,26 @@ namespace FarrierClientManager.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020130
-			public const int avd_hide_password_1 = 2130837808;
+			// aapt resource value: 0x7f020134
+			public const int avd_hide_password_1 = 2130837812;
 			
-			// aapt resource value: 0x7f020131
-			public const int avd_hide_password_2 = 2130837809;
+			// aapt resource value: 0x7f020135
+			public const int avd_hide_password_2 = 2130837813;
 			
-			// aapt resource value: 0x7f020132
-			public const int avd_hide_password_3 = 2130837810;
+			// aapt resource value: 0x7f020136
+			public const int avd_hide_password_3 = 2130837814;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020133
-			public const int avd_show_password_1 = 2130837811;
+			// aapt resource value: 0x7f020137
+			public const int avd_show_password_1 = 2130837815;
 			
-			// aapt resource value: 0x7f020134
-			public const int avd_show_password_2 = 2130837812;
+			// aapt resource value: 0x7f020138
+			public const int avd_show_password_2 = 2130837816;
 			
-			// aapt resource value: 0x7f020135
-			public const int avd_show_password_3 = 2130837813;
+			// aapt resource value: 0x7f020139
+			public const int avd_show_password_3 = 2130837817;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -2913,112 +2954,124 @@ namespace FarrierClientManager.Droid
 			public const int ic_vol_type_tv_light = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int mr_button_connected_dark = 2130837772;
+			public const int Icon = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int mr_button_connected_light = 2130837773;
+			public const int input_layout_drop_down_icon = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int mr_button_connecting_dark = 2130837774;
+			public const int inputlayout_togglecollapseicon = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int mr_button_connecting_light = 2130837775;
+			public const int inputlayout_togglevisibleicon = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int mr_button_dark = 2130837776;
+			public const int mr_button_connected_dark = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int mr_button_light = 2130837777;
+			public const int mr_button_connected_light = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int mr_dialog_close_dark = 2130837778;
+			public const int mr_button_connecting_dark = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int mr_dialog_close_light = 2130837779;
+			public const int mr_button_connecting_light = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int mr_dialog_material_background_dark = 2130837780;
+			public const int mr_button_dark = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int mr_dialog_material_background_light = 2130837781;
+			public const int mr_button_light = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int mr_group_collapse = 2130837782;
+			public const int mr_dialog_close_dark = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int mr_group_expand = 2130837783;
+			public const int mr_dialog_close_light = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int mr_media_pause_dark = 2130837784;
+			public const int mr_dialog_material_background_dark = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int mr_media_pause_light = 2130837785;
+			public const int mr_dialog_material_background_light = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int mr_media_play_dark = 2130837786;
+			public const int mr_group_collapse = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int mr_media_play_light = 2130837787;
+			public const int mr_group_expand = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int mr_media_stop_dark = 2130837788;
+			public const int mr_media_pause_dark = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int mr_media_stop_light = 2130837789;
+			public const int mr_media_pause_light = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int mr_vol_type_audiotrack_dark = 2130837790;
+			public const int mr_media_play_dark = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int mr_vol_type_audiotrack_light = 2130837791;
+			public const int mr_media_play_light = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int navigation_empty_icon = 2130837792;
+			public const int mr_media_stop_dark = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int notification_action_background = 2130837793;
+			public const int mr_media_stop_light = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int notification_bg = 2130837794;
+			public const int mr_vol_type_audiotrack_dark = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int notification_bg_low = 2130837795;
+			public const int mr_vol_type_audiotrack_light = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int notification_bg_low_normal = 2130837796;
+			public const int navigation_empty_icon = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int notification_bg_low_pressed = 2130837797;
+			public const int notification_action_background = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int notification_bg_normal = 2130837798;
+			public const int notification_bg = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int notification_bg_normal_pressed = 2130837799;
+			public const int notification_bg_low = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int notification_icon_background = 2130837800;
-			
-			// aapt resource value: 0x7f02012e
-			public const int notification_template_icon_bg = 2130837806;
-			
-			// aapt resource value: 0x7f02012f
-			public const int notification_template_icon_low_bg = 2130837807;
+			public const int notification_bg_low_normal = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int notification_tile_bg = 2130837801;
+			public const int notification_bg_low_pressed = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int notify_panel_notification_icon_bg = 2130837802;
+			public const int notification_bg_normal = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int plus = 2130837803;
+			public const int notification_bg_normal_pressed = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int tooltip_frame_dark = 2130837804;
+			public const int notification_icon_background = 2130837804;
+			
+			// aapt resource value: 0x7f020132
+			public const int notification_template_icon_bg = 2130837810;
+			
+			// aapt resource value: 0x7f020133
+			public const int notification_template_icon_low_bg = 2130837811;
 			
 			// aapt resource value: 0x7f02012d
-			public const int tooltip_frame_light = 2130837805;
+			public const int notification_tile_bg = 2130837805;
+			
+			// aapt resource value: 0x7f02012e
+			public const int notify_panel_notification_icon_bg = 2130837806;
+			
+			// aapt resource value: 0x7f02012f
+			public const int plus = 2130837807;
+			
+			// aapt resource value: 0x7f020130
+			public const int tooltip_frame_dark = 2130837808;
+			
+			// aapt resource value: 0x7f020131
+			public const int tooltip_frame_light = 2130837809;
 			
 			static Drawable()
 			{
@@ -4141,6 +4194,12 @@ namespace FarrierClientManager.Droid
 			
 			// aapt resource value: 0x7f0a0026
 			public const int search_menu_title = 2131361830;
+			
+			// aapt resource value: 0x7f0a003d
+			public const int sfcalendar_inlineviewalldaytext = 2131361853;
+			
+			// aapt resource value: 0x7f0a003c
+			public const int sfcalendar_inlineviewnoappointmenttext = 2131361852;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int status_bar_notification_info_overflow = 2131361851;

@@ -2,20 +2,26 @@
 <ContentPage Title="Client Search"
     xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FarrierClientManager.ClientSearch">
+             x:Class="FarrierClientManager.ClientSearch"
+             x:Name="clientSearch">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="plus.png" Clicked="OnPlusSignClicked"></ToolbarItem>
+        <ToolbarItem Icon="plus.png" Command="{Binding GetAddClientPageCommand}"></ToolbarItem>
     </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <StackLayout>
             <SearchBar Placeholder="Search by name"/>
 
-            <ListView x:Name="clientDetail"
-                      ItemsSource="OnAddCLient"
-                      ItemSelected="OnClientSelected">
+            <ListView
+                ItemsSource="{Binding ClientList}"
+                SelectedItem="{Binding SelectedClient, Mode=TwoWay}"
+                HasUnevenRows="True"
+                SeparatorColor="Black">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding FullName}"/>
+                        <ViewCell>
+                            <Label Text="{Binding FullName}" FontSize="Large"/>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

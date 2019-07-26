@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfcalendar="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             xmlns:local="clr-namespace:FarrierClientManager.Helpers"
+             xmlns:local1="clr-namespace:FarrierClientManager.ViewModels"
+             x:Class="FarrierClientManager.SchedulerPage">
+    <ContentPage.Behaviors>
+        <local1:SchedulerPageViewModel/>
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+        <StackLayout>
+            <sfcalendar:SfCalendar Margin="0,5,0,5" 
+                                 HeightRequest="340"
+                                 BackgroundColor="White" 
+                                 x:Name="calendar" 
+                                 ShowYearView="False"
+                                 ShowLeadingAndTrailingDays="True"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand">
+
+                <sfcalendar:SfCalendar.MonthViewSettings>
+                    <sfcalendar:MonthViewSettings 
+                        DateTextAlignment="Center" 
+                        CellGridOptions="None" 
+                        BorderColor="Transparent" 
+                        DayLabelTextAlignment="Center" 
+                        DateSelectionColor="Transparent" 
+                        TodaySelectionBackgroundColor="Transparent" 
+                        TodayTextColor="Transparent" 
+                        SelectionRadius="0"
+                        >
+
+                        <sfcalendar:MonthViewSettings.CellTemplate>
+                            <DataTemplate>
+                                <Grid 
+                                    BackgroundColor="White" 
+                                    Margin="0" 
+                                    Padding="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.5*"/>
+                                        <RowDefinition Height="0.5*"/>
+                                    </Grid.RowDefinitions>
+                                    <Frame IsVisible="{Binding IsToday}"
+                                           BorderColor="CornflowerBlue" 
+                                           BackgroundColor="{Binding SelectionColor}"
+                                           HasShadow="False"
+                                           AbsoluteLayout.LayoutBounds="0.5,0.5,30,30" 
+                                           AbsoluteLayout.LayoutFlags="PositionProportional"
+                                           CornerRadius="50" 
+                                           HeightRequest="2"
+                                           WidthRequest="2" 
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center">
+                                    </Frame>
+                                    <Frame x:Name="frame" IsVisible="{Binding IsSelected}" 
+                                           BorderColor="Black" 
+                                           
+                                           BackgroundColor="{Binding SelectionColor}" 
+                                           HasShadow="True"
+                                           AbsoluteLayout.LayoutBounds="0.5,0.5,30,30" 
+                                           AbsoluteLayout.LayoutFlags="PositionProportional"
+                                           CornerRadius="50" 
+                                           HeightRequest="50"
+                                           WidthRequest="50" 
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center" Grid.Row="0"
+                                           >
+                                    </Frame>
+                                    <Label IsVisible="True" 
+                                        FontSize="13" 
+                                           FontAttributes="None" 
+                                           HorizontalTextAlignment="Center" 
+                                           VerticalTextAlignment="Center" 
+                                           AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" 
+                                           AbsoluteLayout.LayoutFlags="All" 
+                                           Text="{Binding DayNumber}" Grid.Row="0"
+                                           TextColor="{Binding SelectedTextColor}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </sfcalendar:MonthViewSettings.CellTemplate>
+
+                    </sfcalendar:MonthViewSettings>
+                </sfcalendar:SfCalendar.MonthViewSettings>
+            </sfcalendar:SfCalendar>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using FarrierClientManager.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,27 +9,14 @@ namespace FarrierClientManager
     {
         public WelcomePage()
 		{
-			InitializeComponent ();
+			InitializeComponent();
+            ViewModel = new WelcomePageViewModel(new PageService());
 		}
 
-        async void Button_Clicked(object sender, EventArgs e)
+        public WelcomePageViewModel ViewModel
         {
-            await Navigation.PushAsync(new NewInvoice());
-        }
-
-        async void Button_Clicked_1(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Pricing());
-        }
-
-        async void Button_Clicked_2(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Inventory());
-        }
-
-        async void Button_Clicked_3(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ClientSearch());
+            get => BindingContext as WelcomePageViewModel;
+            set { BindingContext = value; }
         }
     }
 }

@@ -68,5 +68,5 @@ namespace FarrierClientManager
             await Navigation.PopAsync();
         }
     }
-    /
+    
 }

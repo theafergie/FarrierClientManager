@@ -158,7 +158,9 @@
                 <Editor x:Name="notesBox" HeightRequest="100" WidthRequest="300" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Placeholder="Notes" Completed="NotesBox_Completed"  BackgroundColor="LightGray"/>
 
             </StackLayout>
-            <Button Text="Equine" Clicked="EquineButtonClicked"/>
+            <Button 
+                Text="Equine" 
+                Command="{Binding GetEquineListCommand}"/>
             <Button Text="Delete" HorizontalOptions="CenterAndExpand" Clicked="OnDeleteClicked"/>
 
         </StackLayout>

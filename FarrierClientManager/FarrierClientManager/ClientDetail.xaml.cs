@@ -27,6 +27,7 @@ namespace FarrierClientManager
             }
 
             InitializeComponent();
+            ViewModel = new ClientDetailViewModel(new PageService(), myClient);
 
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
 
@@ -70,9 +71,15 @@ namespace FarrierClientManager
 
         }
 
-        async void EquineButtonClicked(object sender, EventArgs e)
+        //async void EquineButtonClicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new EquineListPage(myClient));
+        //}
+
+        public ClientDetailViewModel ViewModel
         {
-            await Navigation.PushAsync(new EquineListPage(myClient));
+            get => BindingContext as ClientDetailViewModel;
+            set { BindingContext = value; }
         }
     }
 }

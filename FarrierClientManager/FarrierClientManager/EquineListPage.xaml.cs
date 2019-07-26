@@ -27,11 +27,13 @@ namespace FarrierClientManager
             myClient = client;
             InitializeComponent();
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            //ViewModel = new EquineListPageViewModel();
 
         }
         protected override async void OnAppearing()
         {
             if (_isDataLoaded)
+
                 return;
 
             _isDataLoaded = true;
@@ -46,12 +48,20 @@ namespace FarrierClientManager
             await _connection.CreateTableAsync<EquineViewModel>();
             var equine = await _connection.Table<EquineViewModel>().ToListAsync();
             _equines = new ObservableCollection<EquineViewModel>(equine);
+            //equineList.ItemsSource = _equines;
             equineList.ItemsSource = _equines.Where(x => x.OwnerId == myClient.Id);
+            OnPropertyChanged("Name");
         }
 
         private async void OnPlusSignClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddEquinePage(myClient));
         }
+
+        //public EquineListPageViewModel ViewModel
+        //{
+        //    get => BindingContext as EquineListPageViewModel;
+        //    set { BindingContext = value; }
+        //}
     }
 }
