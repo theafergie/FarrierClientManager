@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarrierClientManager.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +13,8 @@ namespace FarrierClientManager
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTIzODczQDMxMzcyZTMyMmUzMG1nbFRWQXpKd1NRL2xKV1lzMFJUMlc1VTBpa1c0N2Mxby9TazBSMkNsZWs9");
             InitializeComponent();
 
-            MainPage = new NavigationPage (new WelcomePage());
+            //MainPage = new NavigationPage (new WelcomePage());
+            MainPage = new NavigationPage(new HomePageTabbed());
             
         }
 

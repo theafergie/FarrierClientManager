@@ -4,7 +4,9 @@
              xmlns:sfcalendar="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
              xmlns:local="clr-namespace:FarrierClientManager.Helpers"
              xmlns:local1="clr-namespace:FarrierClientManager.ViewModels"
-             x:Class="FarrierClientManager.SchedulerPage">
+             x:Class="FarrierClientManager.SchedulerPage"
+             Title="Schedule"
+             Icon="calendar.png">
     <ContentPage.Behaviors>
         <local1:SchedulerPageViewModel/>
     </ContentPage.Behaviors>

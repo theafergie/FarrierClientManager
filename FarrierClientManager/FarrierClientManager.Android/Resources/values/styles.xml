@@ -27,4 +27,16 @@
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
   </style>
+
+  <style name="CustomTab" parent="@android:style/Widget.Holo.ActionBar.TabText">
+    <item name="android:textSize">4sp</item>
+  </style>
+
+  <style name="MyTabLayout" parent="Base.Widget.Design.TabLayout">
+    <item name="tabTextAppearance">@style/MyTabTextAppearance</item>
+  </style>
+
+  <style name="MyTabTextAppearance" parent="TextAppearance.AppCompat.Button">
+    <item name="android:textSize">10sp</item>
+  </style>
 </resources>
