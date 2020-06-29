@@ -18,7 +18,15 @@ namespace FarrierClientManager.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            try
+            {
+                global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            }
+            catch(Exception e)
+                {
+                    Console.WriteLine("output: error message " + e.Message + " inner exception: " + e.InnerException + " stacktrace: " + e.StackTrace);
+                }
             LoadApplication(new App());
         }
     }

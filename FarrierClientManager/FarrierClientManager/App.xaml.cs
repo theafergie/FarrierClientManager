@@ -9,11 +9,13 @@ namespace FarrierClientManager
     {
         public App()
         {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTIzODczQDMxMzcyZTMyMmUzMG1nbFRWQXpKd1NRL2xKV1lzMFJUMlc1VTBpa1c0N2Mxby9TazBSMkNsZWs9");
             InitializeComponent();
 
-            MainPage = new NavigationPage (new WelcomePage());
-            
+             MainPage = new NavigationPage(new WelcomePage());
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTIzODczQDMxMzcyZTMyMmUzMG1nbFRWQXpKd1NRL2xKV1lzMFJUMlc1VTBpa1c0N2Mxby9TazBSMkNsZWs9");
+
+            //MainPage = new NavigationPage(new syncfusion());
+
         }
 
         protected override void OnStart()

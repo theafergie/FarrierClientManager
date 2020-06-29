@@ -24,7 +24,7 @@ namespace FarrierClientManager.ViewModels
             calendar.SelectionChanged += Calendar_SelectionChanged;
         }
 
-        private void Calendar_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Calendar_SelectionChanged(object sender, Syncfusion.SfCalendar.XForms.SelectionChangedEventArgs e)
         {
             this.enableSelection = true;
         }
