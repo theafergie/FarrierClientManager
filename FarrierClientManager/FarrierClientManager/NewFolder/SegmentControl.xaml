@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FarrierClientManager.NewFolder.SegmentControl"
+             x:Name="this">
+  <ContentView.Content>
+        <Grid ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <BoxView
+                x:Name="segmentColor"
+                HeightRequest="45"
+                Grid.Row="0"
+                Grid.ColumnSpan="4"
+                BackgroundColor="SlateGray"
+                CornerRadius="3"/>
+            <Button
+                x:Name="buttonOne"
+                Text="{Binding Source={x:Reference this}, Path=ButtonOneText}"
+                TextColor="White"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HeightRequest="45"
+                CornerRadius="3"
+                BackgroundColor="SlateGray"
+                Padding="0,0,0,1"
+                Clicked="ButtonOne_Clicked"
+                />
+            <Button
+                x:Name="buttonTwo"
+                Text="{Binding Source={x:Reference this}, Path=ButtonTwoText}"
+                TextColor="White"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                HeightRequest="45"
+                CornerRadius="3"
+                BackgroundColor="SlateGray"
+                Padding="0,0,0,1"
+                Clicked="ButtonTwo_Clicked"
+                />
+        </Grid>
+        
+    </ContentView.Content>
+</ContentView>

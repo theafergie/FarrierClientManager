@@ -2,7 +2,8 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FarrierClientManager.ClientSearch"
+    xmlns:controls="clr-namespace:FarrierClientManager.NewFolder"
+    x:Class="FarrierClientManager.ClientSearch"
              x:Name="clientSearch"
              Title="SEARCH"
     Icon="search.png">
@@ -12,6 +13,10 @@
     
     <ContentPage.Content>
         <StackLayout>
+            <controls:SegmentControl
+                ButtonOneText="Clients"
+                ButtonTwoText="Equine"
+                />
             <SearchBar Placeholder="Search by name"/>
 
             <ListView
